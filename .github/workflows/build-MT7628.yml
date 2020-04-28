@@ -1,17 +1,17 @@
 name: Build MT7628
 
-on: 
+on:
   release:
-    types: [published]
+    types:  [published]
   push:
-    tags:
-    - 'v*'
-    branches: 
+    branches:
       - master
+    paths:
+      - '.config'
   schedule:
-    - cron: 0 17 * * 4
+    - cron: 0 8 * * 5
   watch:
-    types: [started]
+    types: started
 
 jobs:
   build:
